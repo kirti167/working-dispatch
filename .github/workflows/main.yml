@@ -39,7 +39,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-         python workflow-file.py  
+         python workflow-file.py  ${{ github.event.inputs.input1}} ${{ github.event.inputs.tags}} 
 
       # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
