@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
     inputs:
       input1:
-        description: "num"
+        description: "a"
         required: true
         
       input2:
