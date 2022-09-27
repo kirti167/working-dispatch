@@ -14,12 +14,12 @@ on:
   workflow_dispatch:
     inputs:
       input1:
-        description: "a"
+        description: "num"
         required: true
         
-      input2:
-        description: "b"
-        required: true    
+      # input2:
+      #   description: "b"
+      #   required: true    
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -40,8 +40,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-           python workflow-file.py  ${{ github.event.inputs.input1}} ${{ github.event.inputs.input2}} 
-
+           python sum.py  ${{ github.event.inputs.input1}} 
       # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
       #   run: |
