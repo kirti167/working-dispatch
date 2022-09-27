@@ -16,9 +16,10 @@ on:
       input1:
         description: "a"
         required: true
-        default: "warning"
-    tags:
-      description: "b"    
+        
+      input2:
+        description: "b"
+        required: true    
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -39,7 +40,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-         python workflow-file.py  ${{ github.event.inputs.input1}} ${{ github.event.inputs.tags}} 
+           python workflow-file.py  ${{ github.event.inputs.input1}} ${{ github.event.inputs.input2}} 
 
       # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
